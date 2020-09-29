@@ -1,0 +1,26 @@
+body {
+    background: radial-gradient(ellipse at center, #a974ad 0%, #4a4885 52%, #161725 100%) no-repeat;
+    height: 100vh;
+}
+
+$base-size: 16px;
+@mixin font-size ($target, $context: $base-size) {
+    font-size: ($target/$context) * 1rem;
+}
+
+.bg {
+    background: rgba(255, 255, 255, 0.102);
+    width: 500px;
+    height: 300px;
+    margin: auto;
+}
+
+.bg-white {
+    background: #fff;
+    span {
+        @include font-size(14px);
+    }
+    h1 {
+        @include font-size(30px);
+    }
+}
